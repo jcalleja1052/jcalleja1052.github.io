@@ -10,18 +10,18 @@ body {
 }
 
 h1 {
-    color: rgb(220, 20, 60);
+    color: rgb(230, 30, 54);
 }
 
 h2 {
-    color: rgba(119, 11, 32, 0.938);
+    color: rgb(220, 20, 60);
 }
 
 
 
 /* link stuff */
 a {
-    color: crimson;
+    color: rgb(230, 30, 54);
     text-decoration: none;
 }
 
@@ -43,4 +43,8 @@ a:active {
 
 .links {
     font-size: xx-large;
+}
+
+.assignments {
+    font-size: 20px;
 }

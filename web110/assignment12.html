@@ -1,1 +1,112 @@
+<!DOCTYPE html>
 
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="description" content="Harper College WEB110 Assignment 12">
+        <link rel="stylesheet" href="style.css">
+
+        <title>Assignment 12</title>
+
+    </head>
+
+    <body>
+        <!--functions for realtime clock: 'Add a paragraph to the page. Use JavaScript to display the current date and time  in the paragraph.'-->
+        <script>
+            function realtimeClock() {      //function to get the clock working
+                const d = new Date();       //making a new var d that matches with the current date
+                let sec =  d.getSeconds();  //show seconds
+                let min = d.getMinutes();   //show minutes
+                let hr = d.getHours();      //show hours
+                min = check(min);           //have min call check function
+                sec = check(sec);           //have sec call check function
+                document.getElementById('time').innerHTML = Date(); hr + ":" + min + ":" + sec; //display time in HH:MM:SS format (i did not know why it never showed the time until i realized i never called Date())
+                setTimeout(realtimeClock, 1000); //update the clock every 1000ms
+            }
+
+            function check() { //this function will check when hours/minutes reaches the number 10
+                var i;
+                if (i < 10) { //if minutes or hours reaches a number higher than 10, reset it back to 0
+                    i = "0" + i
+                };
+                return i;
+            }
+        </script>
+<!--header link stuff-->
+        <div class = "header">
+            <h1>Assignment 12</h1>
+
+            <div class="links">
+                <a href="https://jcalleja1052.github.io/web110/index.html">WEB110 Assignments Page</a>
+                /
+                <a href="https://jcalleja1052.github.io/index.html">Repository Homepage</a>
+            </div>
+        </div>
+
+<!--header for my name: 'Add an empty top-level heading to the page. Use JavaScript to display your name in the heading.'-->   
+        <h2 id="showName"></h2>
+        <script>    
+            document.getElementById("showName").innerHTML = "Justin Tyler Calleja";
+        </script>
+        <p>(this header was displayed using javascript)</p>
+
+<!--canvas with my name on it with colors : 'Add a canvas to the page. Use JavaScript to write your name on the canvas.'-->
+        <h2>Canvas with my name on it</h2>
+
+        <canvas id="ex" width="180" height="180">
+            This text is displayed if your browser does not support HTML5 Canvas.
+        </canvas>
+
+        <script>
+            var ex = document.getElementById("ex");
+            var context = ex.getContext("2d");
+
+            context.strokeStyle="red";
+
+            context.font = "18px sans-serif";
+            context.textAlign = "center";
+            context.strokeText("Justin Tyler Calleja", 90, 90);
+        </script>
+
+<!--another canvas with like lines or squares or something: 'Add another canvas to the page. Draw one or more lines, circles, or squares on the canvas.'-->
+        <h2>Another canvas with some lines and stuff</h2>
+
+        <canvas id="ex1" width="180" height="180">
+            This text is displayed if your browser does not support HTML5 Canvas.
+        </canvas>
+
+        <script>
+            var ex1 = document.getElementById("ex1");
+            var context = ex1.getContext("2d");
+
+            context.beginPath(); //making a square
+            context.strokeStyle = "white";
+            context.strokeRect(0, 0, 180, 180);
+            context.closePath();
+
+            context.beginPath(); //making a circle
+            context.strokeStyle = "blue";
+            context.arc(90, 90, 90, 90 * Math.PI, false);
+            context.stroke();
+            context.closePath();
+
+            context.lineWidth = 4; //adding a line
+            context.moveTo(90, 90);
+            context.lineTo(180, 180);
+            context.stroke();
+        </script>
+
+<!--button to show realtimeclock-->
+        <p>Using JavaScript, we can create a function that can display the date and time. I created two functions that create the variables for hours, minutes, and seconds along with calling Date() which grabs the current Date and time, and using the other function I created, the numbers on minutes and seconds will increment by +1 until it reaches the number 10, resetting either the value for hours or minutes back to 0.</p>
+            <button type="button" onclick="document.getElementById('time').innerHTML = realtimeClock()">
+                Click this button to show current date and time
+            </button>
+        <p id="time"></p>
+
+<!--assignment paragraph-->
+        <hr><p>For assignment 12, something I learned about JavaScript is just how simple yet powerful this language is for websites. I understand very well now just why so many websites decide to use JavaScript. I also am surprised just how vaguely similar JavaScript is to normal object-oriented programming languages, like Java itself or C++, so it's going to be a bit easier for me to understand JavaScript because some of the concepts used in JS are pretty similar to the other programming languages I am used to normally, like functions and if statements.</p>
+    </body>
+
+</html>

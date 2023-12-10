@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Chilanka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    font-family: 'Chilanka', cursive;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: rgb(22, 22, 22);    
+    color: aliceblue;
+}
+
+h1 {
+    color: #D3D350;
+}
+
+h2 {
+    color: #99993A;
+}
+
+p {
+    margin-right: 1000px;
+}
+
+/* link stuff */
+a {
+    color: #D3D350;
+    text-decoration: none;
+    font-family: chilanka;
+}
+
+a:hover {
+    color:blanchedalmond;
+    text-decoration: none;
+}
+
+a:active {
+    color:#FFFF60;
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.links {
+    font-size: xx-large;
+}

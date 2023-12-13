@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="description" content="Harper College WEB110 Final project">
+        <link rel="stylesheet" href="style.css">
+
+        <title>Final project</title>
+
+    </head>
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,200&family=Open+Sans&display=swap');
+    p {
+        margin-right: 1000px;
+    }
+    .h-example {
+        width: 550px;
+        border: 2px solid #264DE4;
+        padding: 50px;
+        margin: 20px;
+    }
+    </style>
+
+    <body>
+        <div class = "header">
+            <h1 style="font-family: chilanka;">Final project for Web110</h1>
+
+            <div class="links" style="font-family: chilanka;">
+                <a href="https://jcalleja1052.github.io/web110/index.html">WEB110 Assignments Page</a>
+                /
+                <a href="https://jcalleja1052.github.io/web110/final/index.html">Final project homepage</a>
+                /
+                <a href="https://jcalleja1052.github.io/index.html">Repository Homepage</a>
+            </div>
+        </div>
+
+        <h1 style = "color: #264DE4;">CSS Summary</h1>
+
+        <img src="image/CSS3_logo.svg" style="width: 250px;">
+
+        <p>When it comes using HTML, CSS, and JavaScript for website development, HTML is essentially the building blocks for a website as CSS is the styling portion of a website. However, since it is basically the barebones of a webpage, the other coding languages, CSS and JavaScript, come into play in order to bring more life to the webpage. This summary is focusing on CSS, so you can check the summary for JavaScript and HTML at the bottom of the page.</p>
+
+        <p>CSS, or Cascading Style Sheets, is a coding language that is focused on styling, which is mainly used with HTML for improving the look of the .html document. Many simple examples of what CSS can do include:</p>
+        <div class = "h-example">
+            <h3 style="color: white; text-align: center;">Adding style to a divider border in HTML with a box and colors</h2>
+            
+            <h3 style="color: #264DE4; font-family: 'Kanit', sans-serif; text-align: center;">Changing the <span style = "color: aqua;">c</span><span style = "color: rgb(0, 255, 34);">o</span><span style = "color: rgb(255, 251, 0);">l</span><span style = "color: rgb(255, 145, 0);">o</span><span style = "color: rgb(255, 0, 0);">r</span> of text and font (this font is Kanit Italic imported from Google fonts)</h3>
+            
+            <h3 style="color: white; text-align: center;">Having a .css file that can be used universally for .html documents (if they have the CSS stylesheet file linked with the .html file)</h3>
+            
+            <h3 style="color: white; text-align: center;">Improve the look of the content of a webpage in general and make it accessible for any size and device viewing the page</h3>
+        </div>
+
+        <p>With CSS, there are multiple ways to add styling to your HTML document. The multiple ways to add styling to your HTML document is:</p>
+        <div class = "h-example">
+            <h3 style="color: white; text-align: center;">Internal<br>(using the <span style="color:#D3D350;">&lt;style&gt;</span> tag with HTML to add styling)</h3><hr>
+            <h3 style="color: white; text-align: center;">External<br>(similar to internal but instead of being in the HTML file it uses a separate file (.css) for the HTML to link with for styling)</h3><hr>
+            <h3 style="color: white; text-align: center;">Inline<br>(adding 'style="property: value;"' to a tag before ending the starting tag with &gt; <br>Example of this is &lt;p<span style="color:#D3D350;"> style </span>= <span style="color:#d38b50;">"text-align: center;"</span>&gt;)</h3>
+        </div>
+
+        <p>As said before, CSS can allow universal styling for HTML pages to be styled/formatted the same way as long as each HTML page is connected to the .css file. The way you can do this is with adding the link tag in the head section of the HTML document.<br>Example:</p>
+        <h3 style="color: white;">
+            &lt;<span style="color:#D3D350;">link rel="stylesheet"</span> 
+            <span style="color:#d38b50;">href="style.css"</span>&gt;
+        </h3>
+        <p>The element 'link' is used to define the relationship between the HTML document and an external file, in this case it is commonly use to link with CSS files or style sheets.<br><br>
+        The attribute 'href' is referring to what destination the link element is pointing to, which is obviously style.css in this example since they are in the same folder.<br><br>
+        If the external file (and this applies to 'href' being used in other situations) is located in a different folder that the current HTML file is not in, then this would require the user to type the destination towards the external file. For example, if my style sheet for this document was located in a folder called 'stylesheets', then I would have to type:<br></p>
+        <h3 style="color: white;">
+            &lt;<span style="color:#D3D350;">link rel="stylesheet"</span> 
+            <span style="color:#d38b50;">href="</span><span style="color:#85beff;">stylesheets/style.css</span><span style="color:#d38b50;">"</span>&gt;
+        </h3>
+        <p>With all of these tools that CSS has to offer, it can really improve the appearance of an HTML page's content entirely. The amount of things CSS can do can create a stylistic website that can be unique and different to many other websites with HTML and CSS, however these two languages are lacking in one thing that JavaScript has: interactability.<br><br>HTML may be the building blocks of a webpage with headers and text and links, and CSS may be the stylistic aspect of the webpage with colors and customizability, but JavaScript is the one language out of the three that can allow the user browsing on the page to fully interact with the webpage.</p>
+        <h3 style="color: white;">You can see the summaries for HTML and JavaScript by clicking their icons.</h3>
+
+        <a href = "https://jcalleja1052.github.io/web110/final/summary1.html"><img src="image/HTML5 Logo Badge.svg" alt="HTML Summary" style="width: 250px;"></a>
+
+        <a href = "https://jcalleja1052.github.io/web110/final/summary3.html"><img src="image/JavaScript-logo.png" alt="JS Summary" style="width: 250px;"></a>
+
+    </body>
+
+</html>

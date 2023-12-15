@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="description" content="Harper College WEB110 Final project">
+        <link rel="stylesheet" href="style.css">
+
+        <title>Final project</title>
+
+    </head>
+
+    <style>
+    p {
+        margin-right: 1000px;
+    }
+    .h-example {
+        width: 600px;
+        border: 2px solid #E4A126;;
+        padding: 50px;
+        margin: 20px;
+    }
+    </style>
+
+    <body onload = "realtimeClock()">
+        <div class = "header">
+            <h1 style="font-family: chilanka;">Final project for Web110</h1>
+
+            <div class="links" style="font-family: chilanka;">
+                <a href="https://jcalleja1052.github.io/web110/index.html">WEB110 Assignments Page</a>
+                /
+                <a href="https://jcalleja1052.github.io/web110/final/index.html">Final project homepage</a>
+                /
+                <a href="https://jcalleja1052.github.io/index.html">Repository Homepage</a>
+            </div>
+        </div>
+
+        <h1 style = "color: #E4A126;">JavaScript Summary</h1>
+        
+        <img src="image/JavaScript-logo.png" style="width: 250px;">
+
+        <p>JavaScript is a programming language that has similar syntax to Java (hence the name), although they have completely different purposes. For instance, Java uses C-style syntax and is an object-oriented programming language with classes and objects. On the other hand, JavaScript also has a similar C-style syntax, but instead of being object-oriented, it is used for text and scripts with just names and elements similar to Java in general. It should not be said that JavaScript and Java are similar. They may have similar C syntax used in their language, but they used for completely different things. This language is also one of the main programming languages used with the World Wide Web, with HTML and CSS.</p>
+
+        <p>In order to implement JavaScript into an HTML document, we use the &lt;script&gt; tag in HTML. It can also be used in CSS, but it is highly recommended to add anything JavaScript related into an HTML file instead.<br>Example of using JavaScript in HTML:</p>
+        <div class = "h-example">
+            
+            <h3 style="color: white;">
+                &lt;h1 id = "text"&gt;&lt;/h1&gt;<br>
+                &lt;script&gt;<br>
+                document.getElementById("text").innerHTML = "Harper College";<br>
+                &lt;/script&gt;<br><br></h3>
+                <!----------------------->
+                <hr>
+                <h3 style="color: white; text-align:center">
+                What this code should basically display is:</h3>
+                <h1 id = "text" style="text-align: center; color:white"></h1>
+                <script>
+                    document.getElementById("text").innerHTML = "Harper College";
+                </script>
+            </h3>
+        </div>
+
+        <p>In this example, right before we start working with the &lt;script&gt; tag, we create a new header tag of 'h1' with the ID of "text". This ID will be used to link the header with the JavaScript that is made in between the script tags. Explaining each different portion of this JavaScript code, 'document' is a variable that is using a method ('getElementbyId'). This method is exactly what you think it is, getting the element (the element in question being a string called "text"). It is then using this ID to create a string of text (innerHTML) that will be "Harper College".<br>In short, this is creating the text "Harper College" to be used by &lt;h1&gt; and this is done by linking the IDs with both the script and the header.</p>
+
+        <p>The reason why the JavaScript code is going after the html is because we want the HTML to load first before the script starts working, if the script loaded before the HTML then the script wouldn't work with the HTML.</p>
+
+        <p>Inside the style tag, with JavaScript you can also create what's known as functions that will usually end up using a lot of math involved in it, though this depends on what the function is created for. Simply think of a function as a group of code that can be called from another part of code that's not inside the code (however you can have the function call itself which is called recursion).</p>
+
+        <p>Here is an example of a basic function:</p>
+        <div class = "h-example">
+            <h3 style="color: white;">
+                &lt;h1 id = "display"&gt;&lt;/h1&gt;<br>
+                &lt;script&gt;<br>
+                function finalExample { <br>
+                let a, b, c;<br>
+                b = 2000;<br>
+                c = 23;<br>
+                a = b + c;<br>
+                return a;<br>
+                }<br>
+                &lt;/script&gt;<br><br></h3>
+                <!----------------------->
+                <hr>
+                <h3 style="color: white; text-align:center">
+                What this code should basically display is:</h3>
+                <h1 id = "display" style="text-align: center; color:white"></h1>
+                <script>
+                    function finalExample() {
+                        let a, b, c;
+                        b=2000;
+                        c=23;
+                        a = b + c;
+                        return a;
+                    }
+                    document.getElementById("display").innerHTML = finalExample();
+                </script>
+            </h3>
+        </div>
+
+        <p>Again before we start with the JavaScript, we make a header with an ID to link the header with the script we are making with document.getElementById().<br>
+        Next, we now create the function called 'finalExample' for this example. The braces is used to keep all of the code in the function grouped and is required for the function to work.<p>
+        
+        <p>In this code, we declare three different variables, a, b, and c using 'let'. The next lines is having b and c equal to two different numbers, and then letting a equal b and c added together. A more understandable version of this without the letters can be shown here describing each line of the code: </p>
+
+        <p>let a, b, c; - create 3 variables A, B, C.<br>
+            b = 2000; - Have B equal to the number 2000<br>
+            c = 23; - Have C equal to the number 23<br>
+            a = b + c; - A = 2000 + 23, so A is 2023.<br>
+            return a; -  Have what A is equal to be the final result of this function (2023).
+        </p>
+
+        <p>The 'return a;' in this function is a statement that ends the function and depending on what variable is being added to the return statement, that will be the variable sent to whenever this function is called.</p>
+
+        <p>JavaScript has many things to offer when it comes to developing websites with this language alongside HTML and CSS, here are some examples of what JavaScript can really make:</p>
+
+        <script>
+            function randomIntGenerator() {
+                document.getElementById("randomInt").innerHTML = Math.floor(Math.random() * 50);
+            }
+        </script>
+
+        <button type="button" onclick="randomIntGenerator()">Clickable buttons and random number generators (clicking this button gives you a random integer 0-50)</button>
+        <p id="randomInt"></p>
+
+        <p>Realtime clock with date and time</p>
+        <p id="time"></p>
+
+        <script>
+            function realtimeClock() {      
+                const d = new Date();       
+                let sec =  d.getSeconds();  
+                let min = d.getMinutes();   
+                let hr = d.getHours();      
+                min = check(min);           
+                sec = check(sec);           
+                document.getElementById('time').innerHTML = Date(); hr + ":" + min + ":" + sec; 
+                setTimeout(realtimeClock, 1000); 
+            }
+
+            function check() { 
+                var i;
+                if (i < 10) { 
+                    i = "0" + i
+                };
+                return i;
+            }
+        </script>
+        
+        <canvas id="ex" width="250" height="180">
+            This text is displayed if your browser does not support HTML5 Canvas.
+        </canvas>
+        <script>
+            var ex = document.getElementById("ex");
+            var context = ex.getContext("2d");
+
+            context.beginPath();
+            context.strokeStyle = "white";
+            context.strokeRect(0, 0, 250, 180);
+            context.closePath();
+
+            context.font = "30px Arial";
+            context.textalign = "center";
+            context.fillText("Creating a canvas", 5, 90);
+            
+        </script>
+        <p>And many more.<br><br>As you can see, if you've checked these summaries in my preferred order (HTML -> CSS -> JS), these three programming languages are the most common languages you will see when people build websites as these three are widely known some of the core technologies of the World Wide Web. HTML is the basic structure of a webpage, while CSS is the language that supports the structure of that page by adding more customizable options of how to present the formatting and style of the content of that page, and JavaScript introduces interactability and complexity to the webpage.</p>
+
+        <h1>That is it for my final project.<br>Thank you for reading and making a fun and enjoyable class to learn about these concepts.</h1>
+        <!---->
+        <h3 style="color: white;">You can see the summaries again for HTML and CSS by clicking their icons.</h3>
+
+        <a href = "https://jcalleja1052.github.io/web110/final/summary1.html"><img src="image/HTML5 Logo Badge.svg" alt="HTML Summary" style="width: 250px;"></a>
+
+        <a href = "https://jcalleja1052.github.io/web110/final/summary2.html"><img src="image/CSS3_logo.svg" alt="CSS Summary" style="width: 250px;"></a>
+    </body>
+
+</html>
